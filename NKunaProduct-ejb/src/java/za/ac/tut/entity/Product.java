@@ -16,6 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="tblProduct")
+ 
 public class Product implements Serializable{
     @Id 
     @GeneratedValue
