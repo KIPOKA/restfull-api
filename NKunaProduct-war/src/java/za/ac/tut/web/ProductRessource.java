@@ -3,9 +3,9 @@ package za.ac.tut.web;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.annotation.PostConstruct;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.persistence.Query;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import za.ac.tut.entity.Product;
@@ -14,7 +14,7 @@ import za.ac.tut.session.ProductBean;
 @Path("/product")
 public class ProductRessource {
     ProductBean service;
-
+    @PostConstruct
     public void initialise() {
         try {
             InitialContext context = new InitialContext();
